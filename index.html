@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Menu phim</title>
 
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- MENU CHÍNH -->
+  <div id="mainMenu" class="menu show">
+    <h2>Menu phim</h2>
+    <button data-target="kikiMenu">Kiki</button>
+  </div>
+
+  <!-- MENU KIKI -->
+  <div id="kikiMenu" class="menu">
+    <button class="back">⬅ Back</button>
+    <h3>Kiki</h3>
+
+    <button data-target="cgv1">CGV Bắc Từ Liêm</button>
+    <button data-target="cgv2">CGV IPH</button>
+  </div>
+
+  <!-- RẠP 1 -->
+  <div id="cgv1" class="menu">
+    <button class="back">⬅ Back</button>
+    <p>18:05</p>
+  </div>
+
+  <!-- RẠP 2 -->
+  <div id="cgv2" class="menu">
+    <button class="back">⬅ Back</button>
+    <p>13:30</p>
+    <p>15:40</p>
+  </div>
+
+  <script src="js/menu.js"></script>
+
+</body>
+</html>
