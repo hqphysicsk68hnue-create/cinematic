@@ -31,3 +31,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+// mở rộng menu
+document.querySelectorAll(".toggle").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const next = btn.nextElementSibling;
+    if (next) {
+      next.classList.toggle("show");
+    }
+  });
+});
+
+// click giờ → popup
+document.querySelectorAll(".time").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.getElementById("popup").style.display = "block";
+  });
+});
+
