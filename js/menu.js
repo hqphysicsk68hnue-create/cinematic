@@ -50,28 +50,3 @@ document.querySelectorAll(".time").forEach(btn => {
 function closePopup() {
   document.getElementById("popup").style.display = "none";
 }
-
-#secret-zone {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 30px;
-  height: 30px;
-}
-
-#note {
-  display: none;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  font-size: 9px;
-  color: #888;
-  background: rgba(255,255,255,0.9);
-  padding: 5px;
-  max-width: 220px;
-}
-
-#secret-zone:hover #note {
-  display: block;
-}
-
