@@ -2,23 +2,22 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Bạn có rảnh vào thứ tư (29/4/2026) tuần sau không?</title>
+  <title>Anh hết bận chưa ạ?</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <!-- MENU CHÍNH -->
   <div id="mainMenu" class="menu show">
-    <h2>Bạn có rảnh vào thứ tư (29/4/2026) tuần sau không?</h2>
-    <p>Không chọn được thì thôi!</p>
-    
-    <button data-target="kikiMenu">Yes</button>
-    <button data-target="NoMenu">No</button>
+    <h2>Anh hết bận chưa ạ?</h2>
+   
+    <button data-target="kikiMenu">Rảnh</button>
+    <button data-target="NoMenu">Bận</button>
 </div>
   
   <!--MENU NO-->
   <div id="NoMenu" class="menu">
-    <p>Được rồi, nhớ nhắn lại tôi nhé! Cảm ơn!</p>
+    <p>Thoát tab và không cần nhắn lại đâu ạ!</p>
     <button class="back">⬅ Back</button>
   </div>
   
@@ -26,26 +25,116 @@
     <!-- MENU KIKI -->
   <div id="kikiMenu" class="menu">
     <button class="back">⬅ Back</button>
-    <h3>Kiki</h3>
+ <h2>🎬 Danh sách phim</h2>
 
-    <button data-target="cgv1">CGV Bắc Từ Liêm</button>
-    <button data-target="cgv2">CGV IPH</button>
-  </div>
+  <button data-target="movie1">Shipper tập sự (Kiki's Delivery) ⭐⭐⭐⭐⭐</button>
+  <button data-target="movie2">Đăng xuất khỏi Trái Đất (Project Hail Mary) ⭐⭐</button>
+  <button data-target="movie3">Cô bé Coraline⭐⭐</button>
+  <button data-target="movie4">Mèo máy thông minh (Doraemon) ⭐⭐⭐⭐⭐</button>
+  <button data-target="movie5">Mấy cái con vàng vàng (minions)⭐⭐⭐⭐⭐ </button>
+  <button data-target="movie6">Người nhện (Spider Man)⭐⭐⭐</button>
+  <button data-target="movie7">Thám tử cừu ⭐⭐</button>
+</div>
 
-  <!-- RẠP 1 -->
-  <div id="cgv1" class="menu">
-    <button class="back">⬅ Back</button>
-    <p>18:05</p>
-  </div>
+<!-- PHIM 1 -->
+<div id="movie1" class="menu">
+  <button class="back">⬅ Back</button>
+  <h3>Shipper tập sự</h3>
 
-  <!-- RẠP 2 -->
-  <div id="cgv2" class="menu">
-    <button class="back">⬅ Back</button>
-    <p>13:30</p>
-    <p>15:40</p>
-  </div>
+  <button data-target="rap1">CGV Liễu Giai</button>
+</div>
 
-  <script src="js/menu.js"></script>
+<!-- RẠP -->
+<div id="rap1" class="menu">
+  <button class="back">⬅ Back</button>
+  <h3>CGV Liễu Giai</h3>
+
+  <button data-target="day1">Thứ 2 (4-May)</button>
+  <button data-target="day2">Thứ 3 (5-May)</button>
+  <button data-target="day3">Thứ 4 (6-May)</button>
+</div>
+
+<!-- NGÀY 1 -->
+<div id="day1" class="menu">
+  <button class="back">⬅ Back</button>
+  <h3>Thứ 2</h3>
+
+  <p>15h10</p>
+  <p>19h45</p>
+</div>
+
+<!-- NGÀY 2 -->
+<div id="day2" class="menu">
+  <button class="back">⬅ Back</button>
+  <h3>Thứ 3</h3>
+
+  <p>13h00</p>
+</div>
+
+<!-- NGÀY 3 -->
+<div id="day3" class="menu">
+  <button class="back">⬅ Back</button>
+  <h3>Thứ 4</h3>
+
+  <p>19h45</p>
+</div>
+
+<!-- PHIM 2 -->
+<div id="movie2" class="menu">
+  <button class="back">⬅ Back</button>
+  <h3>Đăng xuất khỏi Trái Đất</h3>
+
+  <p>❌ Xa lắm không đi được</p>
+</div>
+
+<!-- PHIM 3 -->
+<div id="movie3" class="menu">
+  <button class="back">⬅ Back</button>
+  <h3>Cô bé Coraline</h3>
+
+  <button data-target="rap2">CGV Centerpoint</button>
+</div>
+
+<!-- RẠP 2 -->
+<div id="rap2" class="menu">
+  <button class="back">⬅ Back</button>
+  <h3>CGV Centerpoint</h3>
+
+  <p>17h00</p>
+</div>
+
+<!-- PHIM 4 -->
+<div id="movie2" class="menu">
+  <button class="back">⬅ Back</button>
+  <h3>Mèo máy thông minh</h3>
+
+  <p>❌ 22/5 mới chiếu </p>
+</div>
+
+<!-- PHIM 5 -->
+<div id="movie2" class="menu">
+  <button class="back">⬅ Back</button>
+  <h3>Minions</h3>
+
+  <p>❌ 1/7 mới chiếu </p>
+</div>
+
+  <!-- PHIM 6 -->
+<div id="movie2" class="menu">
+  <button class="back">⬅ Back</button>
+  <h3>Người nhện</h3>
+
+  <p>❌ 22/7 mới chiếu </p>
+</div>
+  <!-- PHIM 7 -->
+<div id="movie2" class="menu">
+  <button class="back">⬅ Back</button>
+  <h3>Thám tử cừu</h3>
+
+  <p>❌ 8/5 mới chiếu </p>
+</div>
+  
+<script src="js/menu.js"></script>
 
 </body>
 </html>
