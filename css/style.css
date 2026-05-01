@@ -51,7 +51,7 @@ button {
 
 
 #note {
-  display: block !important;
+  display: none;
   position: absolute;
   bottom: 0;
   right: 0;
