@@ -43,7 +43,7 @@ button {
 #secret-zone {
   position: fixed;
   bottom: 0;
-  left: 0;
+  right: 0;
   width: 30px;
   height: 30px;
   z-index: 9999;
@@ -54,9 +54,9 @@ button {
   display: none;
   position: absolute;
   bottom: 0;
-  left: 0;
-  font-size: 9px;
-  color: #888;
+  right: 0;
+  font-size: 14px;
+  color: gold;
   background: rgba(255,255,255,0.9);
   padding: 5px;
   max-width: 220px;
