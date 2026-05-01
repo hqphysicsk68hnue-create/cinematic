@@ -51,13 +51,27 @@ function closePopup() {
   document.getElementById("popup").style.display = "none";
 }
 
-#note {
+#secret-zone {
   position: fixed;
-  bottom: 5px;
-  left: 5px;
-  font-size: 10px;      /* siêu nhỏ */
-  color: #888;          /* màu xám nhẹ */
-  opacity: 0.7;         /* mờ mờ */
-  max-width: 250px;
-  line-height: 1.2;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
 }
+
+#note {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 9px;
+  color: #888;
+  background: rgba(255,255,255,0.9);
+  padding: 5px;
+  max-width: 220px;
+}
+
+#secret-zone:hover #note {
+  display: block;
+}
+
