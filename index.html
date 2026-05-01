@@ -5,34 +5,34 @@
   <title>Cinematic</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-  <!-- MENU CHÍNH -->
-  <div id="mainMenu" class="menu show">
-    <h2>Anh hết bận chưa ạ?</h2>
-   
-    <button data-target="kikiMenu">Rảnh</button>
-    <button data-target="NoMenu">Bận</button>
-  </div>
-  
-  <!--MENU NO-->
-  <div id="NoMenu" class="menu">
-    <p>Thoát tab và không cần nhắn lại đâu ạ!</p>
-    <button class="back">⬅ Back</button>
-  </div>
-  
-  
-    <!-- MENU KIKI -->
-  <div id="kikiMenu" class="menu">
-    <button class="back">⬅ Back</button>
- <h2>🎬 Danh sách phim</h2>
+<!-- MENU CHÍNH -->
+<div id="mainMenu" class="menu show">
+  <h2>Anh hết bận chưa ạ?</h2>
 
-  <button data-target="movie1">Shipper tập sự (Kiki's Delivery) ⭐⭐⭐⭐⭐</button>
-  <button data-target="movie2">Đăng xuất khỏi Trái Đất (Project Hail Mary) ⭐⭐</button>
-  <button data-target="movie3">Cô bé Coraline⭐⭐</button>
-  <button data-target="movie4">Mèo máy thông minh (Doraemon) ⭐⭐⭐⭐⭐</button>
-  <button data-target="movie5">Mấy cái con vàng vàng (minions)⭐⭐⭐⭐⭐ </button>
-  <button data-target="movie6">Người nhện (Spider Man)⭐⭐⭐</button>
+  <button data-target="kikiMenu">Rảnh</button>
+  <button data-target="noMenu">Bận</button>
+</div>
+
+<!-- MENU BẬN -->
+<div id="noMenu" class="menu">
+  <p>Thoát tab và không cần nhắn lại đâu ạ!</p>
+  <button class="back">⬅ Back</button>
+</div>
+
+<!-- MENU PHIM -->
+<div id="kikiMenu" class="menu">
+  <button class="back">⬅ Back</button>
+  <h2>🎬 Danh sách phim</h2>
+
+  <button data-target="movie1">Shipper tập sự ⭐⭐⭐⭐⭐</button>
+  <button data-target="movie2">Đăng xuất khỏi Trái Đất ⭐⭐</button>
+  <button data-target="movie3">Cô bé Coraline ⭐⭐</button>
+  <button data-target="movie4">Doraemon ⭐⭐⭐⭐⭐</button>
+  <button data-target="movie5">Minions ⭐⭐⭐⭐⭐</button>
+  <button data-target="movie6">Spider Man ⭐⭐⭐</button>
   <button data-target="movie7">Thám tử cừu ⭐⭐</button>
 </div>
 
@@ -41,37 +41,28 @@
   <button class="back">⬅ Back</button>
   <h3>Shipper tập sự</h3>
 
-  <button data-target="rap1">CGV Liễu Giai</button>
+  <div class="rap">
+    <button class="toggle">CGV Liễu Giai</button>
 
-</div>
-
-<!-- RẠP -->
-<div class="rap">
-  <button class="toggle">CGV Liễu Giai</button>
-
-  <div class="content">
-    
-    <!-- NGÀY -->
-    <button class="toggle">Thứ 2 (4-May)</button>
     <div class="content">
-      <button class="time">15h10</button>
-      <button class="time">19h45</button>
-    </div>
+      <button class="toggle">Thứ 2 (4-May)</button>
+      <div class="content">
+        <button class="time">15h10</button>
+        <button class="time">19h45</button>
+      </div>
 
-    <button class="toggle">Thứ 3 (5-May)</button>
-    <div class="content">
-      <button class="time">13h00</button>
+      <button class="toggle">Thứ 3 (5-May)</button>
+      <div class="content">
+        <button class="time">13h00</button>
+      </div>
     </div>
-    
   </div>
 </div>
-
 
 <!-- PHIM 2 -->
 <div id="movie2" class="menu">
   <button class="back">⬅ Back</button>
   <h3>Đăng xuất khỏi Trái Đất</h3>
-
   <p>❌ Xa lắm không đi được</p>
 </div>
 
@@ -80,48 +71,42 @@
   <button class="back">⬅ Back</button>
   <h3>Cô bé Coraline</h3>
 
-  <button data-target="rap2">CGV Centerpoint</button>
-</div>
-
-<!-- RẠP 2 -->
-<div id="rap2" class="menu">
-  <button class="back">⬅ Back</button>
-  <h3>CGV Centerpoint</h3>
-
-  <p>17h00</p>
+  <div class="rap">
+    <button class="toggle">CGV Centerpoint</button>
+    <div class="content">
+      <button class="time">17h00</button>
+    </div>
+  </div>
 </div>
 
 <!-- PHIM 4 -->
-<div id="movie2" class="menu">
+<div id="movie4" class="menu">
   <button class="back">⬅ Back</button>
-  <h3>Mèo máy thông minh</h3>
-
-  <p>❌ 22/5 mới chiếu </p>
+  <h3>Doraemon</h3>
+  <p>❌ 22/5 mới chiếu</p>
 </div>
 
 <!-- PHIM 5 -->
-<div id="movie2" class="menu">
+<div id="movie5" class="menu">
   <button class="back">⬅ Back</button>
   <h3>Minions</h3>
-
-  <p>❌ 1/7 mới chiếu </p>
+  <p>❌ 1/7 mới chiếu</p>
 </div>
 
-  <!-- PHIM 6 -->
-<div id="movie2" class="menu">
+<!-- PHIM 6 -->
+<div id="movie6" class="menu">
   <button class="back">⬅ Back</button>
-  <h3>Người nhện</h3>
-
-  <p>❌ 22/7 mới chiếu </p>
+  <h3>Spider Man</h3>
+  <p>❌ 22/7 mới chiếu</p>
 </div>
-  <!-- PHIM 7 -->
-<div id="movie2" class="menu">
+
+<!-- PHIM 7 -->
+<div id="movie7" class="menu">
   <button class="back">⬅ Back</button>
   <h3>Thám tử cừu</h3>
-
-  <p>❌ 8/5 mới chiếu </p>
+  <p>❌ 8/5 mới chiếu</p>
 </div>
-  
+
 <script src="js/menu.js"></script>
 
 </body>
