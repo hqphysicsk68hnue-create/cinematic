@@ -51,3 +51,13 @@ function closePopup() {
   document.getElementById("popup").style.display = "none";
 }
 
+#note {
+  position: fixed;
+  bottom: 5px;
+  left: 5px;
+  font-size: 10px;      /* siêu nhỏ */
+  color: #888;          /* màu xám nhẹ */
+  opacity: 0.7;         /* mờ mờ */
+  max-width: 250px;
+  line-height: 1.2;
+}
