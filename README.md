@@ -1,4 +1,4 @@
 # cinematic
-One day, while casually learning to code, I invited an IT guy to hang out.
+One day, while casually learning to code, I thought I would invite an IT guy to hang out with the simple widget.
 
-But I guess I was just a backup option; I even got ignored.  >< ghosted. 
+But I was a backup option; I was ignored.  >< ghosted. 
