@@ -1,68 +1,193 @@
+/* ==========================================
+   RESET & CẤU TRÚC CHUNG
+   ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  background-color: #f8fafc;
+  color: #334155;
+  line-height: 1.6;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+}
+
+/* ==========================================
+   NÚT BẤM (BUTTONS)
+   ========================================== */
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  margin: 6px 4px;
+}
+
+.toggle {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+}
+
+.toggle:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+/* ==========================================
+   MENU & PHẦN NỘI DUNG
+   ========================================== */
 .menu {
   display: none;
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 12px 0;
+  border: 1px solid #e2e8f0;
 }
 
 .menu.show {
   display: block;
+  animation: fadeIn 0.3s ease-out;
 }
 
-button {
-  display: block;
-  margin: 10px;
-  padding: 10px;
-}
 .content {
   display: none;
-  margin-left: 20px;
+  padding: 12px 16px;
+  margin-top: 8px;
+  background: #f1f5f9;
+  border-left: 4px solid #3b82f6;
+  border-radius: 4px;
 }
 
 .content.show {
   display: block;
-}
-
-.toggle {
-  background: #eee;
+  animation: fadeIn 0.3s ease-out;
 }
 
 .time {
-  background: #d1ecf1;
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 8px;
 }
 
-/* Popup */
-#popup {
+/* ==========================================
+   POPUP (MODAL)
+   ========================================== */
+.popup-overlay {
   position: fixed;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
-  padding: 20px;
-  border: 2px solid black;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(4px);
   display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
+.popup-overlay.show {
+  display: flex;
+}
+
+#popup {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  animation: popIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================
+   SECRET ZONE & NOTE
+   ========================================== */
 #secret-zone {
   position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 30px;
-  height: 30px;
+  bottom: 20px;
+  right: 20px;
+  width: 38px;
+  height: 38px;
+  background: #fef08a;
+  border: 1px solid #fde047;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   z-index: 9999;
+  transition: transform 0.2s ease;
 }
 
+#secret-zone:hover {
+  transform: scale(1.1);
+}
 
 #note {
   display: none;
   position: absolute;
-  bottom: 0;
+  bottom: 48px;
   right: 0;
-  font-size: 14px;
-  color: gold;
-  background: rgba(255,255,255,0.9);
-  padding: 5px;
-  max-width: 220px;
+  width: 220px;
+  font-size: 13px;
+  color: #854d0e;
+  background: #fef9c3;
+  border: 1px solid #fef08a;
+  border-radius: 8px;
+  padding: 10px 12px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
   pointer-events: auto;
 }
 
 #secret-zone:hover #note {
   display: block;
+  animation: fadeIn 0.2s ease-in;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
