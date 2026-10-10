@@ -1,6 +1,5 @@
-// Xử lý sự kiện hiển thị Menu, Content và Popup
 document.addEventListener("DOMContentLoaded", () => {
-  // Toggle Menu
+  // 1. Mở / đóng Menu
   const toggleMenuBtn = document.querySelector(".toggle-menu");
   const menu = document.querySelector(".menu");
   if (toggleMenuBtn && menu) {
@@ -9,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Toggle Content
+  // 2. Mở / đóng Content
   const toggleContentBtn = document.querySelector(".toggle-content");
   const content = document.querySelector(".content");
   if (toggleContentBtn && content) {
@@ -18,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Toggle Popup
+  // 3. Mở / đóng Popup
   const openPopupBtn = document.getElementById("open-popup-btn");
   const closePopupBtn = document.getElementById("close-popup-btn");
   const popupOverlay = document.getElementById("popup-overlay");
