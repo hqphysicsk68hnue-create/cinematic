@@ -1,151 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Cinematic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinematic - Hành trình Move On</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<!-- MENU CHÍNH -->
-<div id="mainMenu" class="menu show">
-  <h2>Anh hết bận chưa ạ?</h2>
+  <div class="container">
+    <h2>Hành trình Học tập & Bứt phá</h2>
+    
+    <!-- Nút điều khiển -->
+    <button class="toggle toggle-menu">Mở / Đóng Menu</button>
+    <button class="toggle toggle-content">Mở / Đóng Nội dung</button>
+    <button id="open-popup-btn" class="btn-primary">Mở Popup Thông báo</button>
 
-  <button data-target="kikiMenu">Rảnh</button>
-  <button data-target="noMenu">Bận</button>
-</div>
-
-<!-- MENU BẬN -->
-<div id="noMenu" class="menu">
-  <p>Thoát tab và không cần nhắn lại đâu ạ!</p>
-  <button class="back">⬅ Back</button>
-</div>
-
-<!-- MENU PHIM -->
-<div id="kikiMenu" class="menu">
-  <button class="back">⬅ Back</button>
-  <h2>🎬 Danh sách phim</h2>
-
-  <button data-target="movie1">Shipper tập sự (Kiki's Delivery) ⭐⭐⭐⭐⭐</button>
-  <button data-target="movie2">Đăng xuất khỏi Trái Đất (Project Hail Mary)⭐⭐</button>
-  <button data-target="movie3">Cô bé Coraline ⭐⭐</button>
-  <button data-target="movie4">Chú mèo máy đến từ tương lai (Doraemon) ⭐⭐⭐⭐⭐</button>
-  <button data-target="movie5">Mấy con vàng vàng (Minions) ⭐⭐⭐⭐⭐</button>
-  <button data-target="movie6">Spider Man ⭐⭐⭐</button>
-  <button data-target="movie7">Thám tử cừu ⭐⭐</button>
-</div>
-
-<!-- PHIM 1 -->
-<div id="movie1" class="menu">
-  <button class="back">⬅ Back</button>
-  <h3>Shipper tập sự</h3>
-
-  <div class="rap">
-    <button class="toggle">CGV Liễu Giai</button>
-
-    <div class="content">
-      <button class="toggle">Thứ 2 (4-May)</button>
-      <div class="content">
-        <button class="time">15h10</button>
-        <button class="time">19h45</button>
-         
-      </div>
-
-      <button class="toggle">Thứ 3 (5-May)</button>
-      <div class="content">
-        <button class="time">13h00</button>
-         
-      </div>
+    <!-- Khối Menu -->
+    <div class="menu">
+      <h3>Danh mục bài học</h3>
+      <ul>
+        <li>Bài 1: Cấu trúc HTML5</li>
+        <li>Bài 2: Làm đẹp với CSS3</li>
+        <li>Bài 3: Xử lý sự kiện JavaScript</li>
+      </ul>
+      <div class="time">Cập nhật: Hôm nay</div>
     </div>
-      <button class="toggle">CGV Centerpoint</button>
 
+    <!-- Khối Content -->
     <div class="content">
-      <button class="toggle">Thứ 2 (4-May)</button>
-      <div class="content">
-        <button class="time">19h45</button>
-         
-      </div>
-
-      <button class="toggle">Thứ 4 (6-May)</button>
-      <div class="content">
-        <button class="time">19h45</button>
-         
-      </div>
-    </div>  
+      <p>Mỗi dòng code bạn viết hôm nay là một bước tiến giúp bạn làm chủ công nghệ và xây dựng những sản phẩm thực tế chất lượng cao.</p>
+    </div>
   </div>
-</div>
 
-<!-- PHIM 2 -->
-<div id="movie2" class="menu">
-  <button class="back">⬅ Back</button>
-  <h3>Đăng xuất khỏi Trái Đất</h3>
-  <p>❌ Xa lắm không đi được</p>
-</div>
-
-<!-- PHIM 3 -->
-<div id="movie3" class="menu">
-  <button class="back">⬅ Back</button>
-  <h3>Cô bé Coraline</h3>
-
-  <div class="rap">
-    <button class="toggle">CGV Centerpoint</button>
-   <div class="content">
-      <button class="toggle">Thứ 2 (4-May)</button>
-      <div class="content">
-        <button class="time">17h00</button>
-        
-      </div>
-
-      <button class="toggle">Thứ 4 (6-May)</button>
-      <div class="content">
-        <button class="time">17h00</button>
-        
-      </div>
+  <!-- Popup Modal -->
+  <div id="popup-overlay" class="popup-overlay">
+    <div id="popup">
+      <h3>Thông báo quan trọng</h3>
+      <p>Hãy giữ vững mục tiêu phát triển bản thân mỗi ngày!</p>
+      <button id="close-popup-btn" class="toggle">Đóng Popup</button>
+    </div>
   </div>
-</div>
-</div>
-<!-- PHIM 4 -->
-<div id="movie4" class="menu">
-  <button class="back">⬅ Back</button>
-  <h3>Doraemon</h3>
-  <p>❌ 22/5 mới chiếu</p>
-</div>
 
-<!-- PHIM 5 -->
-<div id="movie5" class="menu">
-  <button class="back">⬅ Back</button>
-  <h3>Minions</h3>
-  <p>❌ 1/7 mới chiếu</p>
-</div>
-
-<!-- PHIM 6 -->
-<div id="movie6" class="menu">
-  <button class="back">⬅ Back</button>
-  <h3>Spider Man</h3>
-  <p>❌ 22/7 mới chiếu</p>
-</div>
-
-<!-- PHIM 7 -->
-<div id="movie7" class="menu">
-  <button class="back">⬅ Back</button>
-  <h3>Thám tử cừu</h3>
-  <p>❌ 8/5 mới chiếu</p>
-</div>
-
-<script src="js/menu.js"></script>
-
- <div id="popup">
-          <p>📸 Vui lòng gửi lại thông tin cho người mời</p>
-          <button onclick="closePopup()">Đóng</button>
-          </div>
-
+  <!-- Secret Zone -->
   <div id="secret-zone">
-  <div id="note">
-    tôi là người hướng nội, nếu không đồng ý thì tôi cũng rất vui vẻ. 
-    Page này là bởi intern của intern nên ai cười làm chó!
+    <span>💡</span>
+    <div id="note">Ghi chú bí mật: Kiên trì luyện tập là chìa khóa thành công!</div>
   </div>
-</div>
 
+  <script src="js/menu.js"></script>
 </body>
 </html>
