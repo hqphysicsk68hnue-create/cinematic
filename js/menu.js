@@ -1,54 +1,37 @@
+// Xử lý sự kiện hiển thị Menu, Content và Popup
 document.addEventListener("DOMContentLoaded", () => {
-
-  const buttons = document.querySelectorAll("button");
-  let history = [];
-
-  buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-
-      // đi tới menu
-      if (btn.dataset.target) {
-        const current = btn.closest(".menu");
-        const next = document.getElementById(btn.dataset.target);
-
-        history.push(current.id);
-
-        current.classList.remove("show");
-        next.classList.add("show");
-      }
-
-      // quay lại
-      if (btn.classList.contains("back")) {
-        const current = btn.closest(".menu");
-        const prev = history.pop();
-
-        current.classList.remove("show");
-        document.getElementById(prev).classList.add("show");
-      }
-
+  // Toggle Menu
+  const toggleMenuBtn = document.querySelector(".toggle-menu");
+  const menu = document.querySelector(".menu");
+  if (toggleMenuBtn && menu) {
+    toggleMenuBtn.addEventListener("click", () => {
+      menu.classList.toggle("show");
     });
-  });
+  }
 
-  // mở rộng menu
-  document.querySelectorAll(".toggle").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const next = btn.nextElementSibling;
-      if (next) {
-        next.classList.toggle("show");
-      }
+  // Toggle Content
+  const toggleContentBtn = document.querySelector(".toggle-content");
+  const content = document.querySelector(".content");
+  if (toggleContentBtn && content) {
+    toggleContentBtn.addEventListener("click", () => {
+      content.classList.toggle("show");
     });
-  });
+  }
 
-  // popup
-  document.querySelectorAll(".time").forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.getElementById("popup").style.display = "block";
+  // Toggle Popup
+  const openPopupBtn = document.getElementById("open-popup-btn");
+  const closePopupBtn = document.getElementById("close-popup-btn");
+  const popupOverlay = document.getElementById("popup-overlay");
+
+  if (openPopupBtn && popupOverlay) {
+    openPopupBtn.addEventListener("click", () => {
+      popupOverlay.classList.add("show");
     });
-  });
+  }
 
+  if (closePopupBtn && popupOverlay) {
+    closePopupBtn.addEventListener("click", () => {
+      popupOverlay.classList.remove("show");
+    });
+  }
 });
-
-// đóng popup
-function closePopup() {
-  document.getElementById("popup").style.display = "none";
-}
